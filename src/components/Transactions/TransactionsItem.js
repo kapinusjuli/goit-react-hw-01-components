@@ -11,8 +11,8 @@ export default function TransactionsItem({ type, amount, currency }) {
   );
 }
 
-// FriendListItem.propTypes = {
-//   isOnline: PropTypes.bool,
-//   avatar: PropTypes.string,
-//   name: PropTypes.string,
-// };
+TransactionsItem.propTypes = {
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  nacurrencyme: PropTypes.string,
+};

@@ -4,7 +4,7 @@
 // Каждая транзакция это строка таблицы.В примере приведена
 // разметка двух транзакций.
 import PropTypes from "prop-types";
-import TransactionsItem from "./TransactionsItem";
+import TransactionsItem from "../Transactions/TransactionsItem";
 import { TransactionHistor, Thead, Ttype } from "./Transaction.styled";
 
 function TransactionHistory({ items }) {
@@ -19,12 +19,12 @@ function TransactionHistory({ items }) {
       </Thead>
 
       <tbody>
-        {items.map((item) => (
+        {items.map(({ id, type, amount, currency }) => (
           <TransactionsItem
-            key={item.id}
-            type={item.type}
-            amount={item.amount}
-            currency={item.currency}
+            key={id}
+            type={type}
+            amount={amount}
+            currency={currency}
           />
         ))}
       </tbody>
